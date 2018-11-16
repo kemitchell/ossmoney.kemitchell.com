@@ -1,0 +1,16 @@
+digraph {
+  node[shape=rect];
+  nodesep=1;
+  Question[label="Have you\ntalked to people\nwho will pay you?"];
+  Talk[label="Talk to people\nwho will pay you."];
+  Really[label="Really?"];
+  ReallyReally[label="Really really?"];
+  Continue;
+
+  Question->Talk[label=No];
+  Question->Really[label=Yes];
+  Really->ReallyReally[label=Yes];
+  Really->Talk[label=No];
+  ReallyReally->Talk[label=No];
+  ReallyReally->Continue[label=Yes];
+}
